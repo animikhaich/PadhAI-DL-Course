@@ -1,2 +1,7 @@
 # Ignore iPython Checkpoints
 .ipynb_checkpoints/
+
+# Ignore Visual Studio Code Cache
+.vscode/
+
+
