@@ -35,3 +35,11 @@ class SigmoidNeuron:
             self.w -= learning_rate * dw
             self.b -= learning_rate * db
         
+    def predit(self, X):
+        Y_pred = list()
+
+        for x in X:
+            y_pred = self.sigmoid(self.perceptron(x))
+            Y_pred.append(y_pred)
+        
+        return np.array(Y_pred)
