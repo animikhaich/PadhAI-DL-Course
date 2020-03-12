@@ -1,0 +1,2 @@
+1. https://www.kaggle.com/c/padhai-hindi-vowel-consonant-classification - PadhAI: Hindi Vowel - Consonant Classification
+2. https://www.kaggle.com/c/padhai-tamil-vowel-consonant-classification - PadhAI: Tamil Vowel - Consonant Classification
