@@ -25,7 +25,7 @@
 - [📚 Course Structure](#-course-structure)
   - [🔬 Basics Module](#-basics-module)
   - [🚀 Advanced PyTorch Module](#-advanced-pytorch-module)
-- [🛠️ Installation](#️-installation)
+- [🛠️ Installation](#-installation)
 - [📓 Notebooks Guide](#-notebooks-guide)
 - [🏆 Kaggle Competitions](#-kaggle-competitions)
 - [📊 Datasets](#-datasets)
@@ -247,9 +247,11 @@ Work with state-of-the-art architectures:
 
 ```python
 from torchvision import models
+from torchvision.models import VGG16_BN_Weights
 
-# Load pretrained VGG-16
-vgg = models.vgg16_bn(pretrained=True)
+# Load pretrained VGG-16 (use weights parameter for newer versions)
+vgg = models.vgg16_bn(weights=VGG16_BN_Weights.IMAGENET1K_V1)
+# For older PyTorch versions: vgg = models.vgg16_bn(pretrained=True)
 
 # Freeze convolutional layers
 for param in vgg.parameters():
@@ -468,9 +470,11 @@ for epoch in range(num_epochs):
 
 ```python
 from torchvision import models
+from torchvision.models import ResNet18_Weights
 
-# Load pretrained model
-model = models.resnet18(pretrained=True)
+# Load pretrained model (use weights parameter for newer versions)
+model = models.resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
+# For older PyTorch versions: model = models.resnet18(pretrained=True)
 
 # Freeze all layers
 for param in model.parameters():
